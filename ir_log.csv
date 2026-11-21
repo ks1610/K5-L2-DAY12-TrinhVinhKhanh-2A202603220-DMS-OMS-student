@@ -1,0 +1,5 @@
+frame_id,source,phenomenon,affected_field,effect_on_label
+D04,real_IR,"Dây an toàn ở trạng thái chưa được thắt",seatbelt,"ghi unknown; Không đủ điều kiện để xác nhận dây an toàn được cài đúng hay không."
+D06,real_IR,"Trạng thái mắt mở nhưng không xác định được hướng nhìn ",gaze_zone,"ghi other; không đủ căn cứ để xác nhận hướng nhìn của mắt."
+S03_rgb,rgb,"Ảnh bị tối ở góc trái, khó xác định trong ghế có trẻ em hay không",occupied,"ghi yes; trong ảnh ir, có thể thấy trẻ em bên trong."
+S07_ir,IR,"Trạng thái trước hoặc sau của cái nôi ",facing,"ghi rear; phần rìa nôi ở gần camera và lõm ở phía sau."
