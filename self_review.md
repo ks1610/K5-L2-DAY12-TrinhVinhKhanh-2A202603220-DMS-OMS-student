@@ -16,7 +16,7 @@ Loại lỗi: `seat_flip`, `wrong_class`, `guess`, `box`, `missing`, `extra`, `l
 
 ## 2. Lỗi mình lặp lại nhiều nhất hôm nay
 
-Lỗi: Nhầm vị trí left/right của bàn tay, thiếu thuộc tính right cho tay.
+Lỗi: Nhầm vị trí left/right của bàn tay, thiếu thuộc tính right cho tay, tôi đã điều chỉnh sau qc và export lại trong `export_final_v2.zip`.
 
 Vì sao mình mắc: Quá trình gán, chưa kiểm tra kỹ thuộc tính của nhãn.
 
