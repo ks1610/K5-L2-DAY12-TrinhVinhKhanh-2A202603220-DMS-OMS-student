@@ -1,0 +1,98 @@
+﻿image,label,field,issue,mine,peer,verdict,guideline_rule,action
+D01.png,hand,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.30,,mine,4.7,"Kiểm tra ảnh gốc: có thấy đủ bàn tay để vẽ box không. Nếu có, chỉnh box sát đầu ngón đến cổ tay; nếu không, xóa box"
+D01.png,hand,box,chỉ có ở peer (hoặc IoU thấp),,,,4.7,"Kiểm tra ảnh gốc: có bàn tay thấy được không. Nếu có, vẽ box theo 4.7; nếu không, bỏ qua"
+D02.png,phone,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,mine,4.7,"Kiểm tra ảnh gốc: chỉ giữ phone nếu thấy ít nhất một phần hình dạng máy (cạnh, góc, màn hình)."
+D02.png,hand,on_wheel,khác giá trị (IoU=0.70),unknown,no,mine,4.7,"Kiểm tra ảnh gốc: nếu tay không chạm vô lăng và thấy rõ thì chọn no, như peer. Nếu không rõ thì giữ unknown"
+D02.png,hand,on_wheel,khác giá trị (IoU=0.76),unknown,no,mine,4.7,"Kiểm tra ảnh gốc: nếu tay không chạm vô lăng và thấy rõ thì chọn no, như peer. Nếu không rõ thì giữ unknown"
+D03.png,face,gaze_zone,khác giá trị (IoU=0.81),other,lap,ambiguous,4.5,"Kiểm tra ảnh gốc: ánh mắt hướng xuống dưới nhưng có thể hướng về phía màn hình xe hoặc cần số, không đủ để xác định nên đặt other"
+D03.png,hand,on_wheel,khác giá trị (IoU=0.78),unknown,no,mine,4.7,Kiểm tra ảnh gốc: nếu tay không chạm vô lăng và thấy rõ thì chọn no
+D03.png,face13,left_eye_outer.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: nếu khóe ngoài mắt trái bị che nhưng vẫn đoán chắc vị trí thì đánh occluded
+D03.png,face13,left_eye_outer.outside,khác cờ,1,0,mine,4.6,"Hai dòng cùng điểm: chọn một trong hai, không đánh cả hai. Theo 4.6, occluded khi đoán chắc, outside khi không đoán được"
+D03.png,face13,left_eye_inner.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: như left_eye_outer
+D03.png,face13,left_eye_inner.outside,khác cờ,1,0,mine,4.6,Cặp với dòng occluded phía trên; chọn một
+D03.png,face13,left_eye_upper.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: mí trên mắt trái có bị che và đoán được vị trí không
+D03.png,face13,left_eye_upper.outside,khác cờ,1,0,mine,4.6,Cặp với dòng occluded phía trên; chọn một
+D03.png,face13,left_eye_lower.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: mí dưới mắt trái
+D03.png,face13,left_eye_lower.outside,khác cờ,1,0,mine,4.6,Cặp với dòng occluded phía trên; chọn một
+D03.png,face13,right_eye_outer.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: khóe ngoài mắt phải
+D03.png,face13,right_eye_inner.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: khóe trong mắt phải
+D03.png,face13,right_eye_upper.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: mí trên mắt phải
+D03.png,face13,right_eye_lower.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: mí dưới mắt phải
+D03.png,face13,mouth_right.outside,khác cờ,1,0,mine,4.6,"Kiểm tra ảnh gốc: khóe miệng phải có đoán được vị trí không. Nếu có, đánh occluded thay vì outside"
+D04.png,person,seatbelt,khác giá trị (IoU=0.65),unknown,worn_correct,mine,4.7,Kiểm tra ảnh gốc: chỉ worn_correct khi thấy dải chéo từ vai xuống hông phía đối diện; không thấy thì giữ unknown
+D04.png,hand,on_wheel,khác giá trị (IoU=0.70),unknown,no,peer,4.7,Kiểm tra ảnh gốc: nếu tay không chạm vô lăng và thấy rõ thì chọn no
+D04.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,4.5,"Kiểm tra ảnh gốc: nếu thấy mặt (trán đến cằm, tai đến tai) thì vẽ box; nếu không thấy rõ thì xóa"
+D05.png,person,seatbelt,khác giá trị (IoU=0.80),unknown,worn_correct,peer,4.7,Kiểm tra ảnh gốc: chỉ worn_correct khi thấy dải chéo đúng hướng; không thấy thì giữ unknown
+D05.png,face,glasses,khác giá trị (IoU=0.69),unknown,clear,mine,4.5,Kiểm tra ảnh gốc: clear khi kính cận và thấy xuyên được tròng; sun khi kính râm; unknown khi không thấy rõ vùng mắt
+D05.png,hand,on_wheel,khác giá trị (IoU=0.54),unknown,no,peer,4.7,Kiểm tra ảnh gốc: nếu tay không chạm vô lăng và thấy rõ thì chọn no
+D05.png,face13,left_eye_outer.occluded,khác cờ,0,1,,4.6,"Kiểm tra ảnh gốc: occluded khi đoán chắc, outside khi không đoán được"
+D05.png,face13,left_eye_outer.outside,khác cờ,1,0,,4.6,Cặp với dòng occluded phía trên; chọn một
+D05.png,face13,left_eye_inner.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: khóe trong mắt trái
+D05.png,face13,left_eye_inner.outside,khác cờ,1,0,,4.6,Cặp với dòng occluded phía trên; chọn một
+D05.png,face13,left_eye_upper.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: mí trên mắt trái
+D05.png,face13,left_eye_upper.outside,khác cờ,1,0,,4.6,Cặp với dòng occluded phía trên; chọn một
+D05.png,face13,left_eye_lower.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: mí dưới mắt trái
+D05.png,face13,left_eye_lower.outside,khác cờ,1,0,,4.6,Cặp với dòng occluded phía trên; chọn một
+D05.png,face13,right_eye_outer.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: khóe ngoài mắt phải
+D05.png,face13,right_eye_outer.outside,khác cờ,1,0,,4.6,Cặp với dòng occluded phía trên; chọn một
+D05.png,face13,right_eye_inner.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: khóe trong mắt phải
+D05.png,face13,right_eye_inner.outside,khác cờ,1,0,,4.6,Cặp với dòng occluded phía trên; chọn một
+D05.png,face13,right_eye_upper.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: mí trên mắt phải
+D05.png,face13,right_eye_upper.outside,khác cờ,1,0,,4.6,Cặp với dòng occluded phía trên; chọn một
+D05.png,face13,right_eye_lower.occluded,khác cờ,0,1,,4.6,Kiểm tra ảnh gốc: mí dưới mắt phải
+D05.png,face13,right_eye_lower.outside,khác cờ,1,0,,4.6,Cặp với dòng occluded phía trên; chọn một
+D05.png,face13,mouth_right.outside,khác cờ,1,0,,4.6,Kiểm tra ảnh gốc: khóe miệng phải có đoán được vị trí không
+D06.png,person,seatbelt,khác giá trị (IoU=0.78),unknown,worn_correct,peer,4.7,Kiểm tra ảnh gốc: chỉ worn_correct khi thấy dải chéo đúng hướng; không thấy thì giữ unknown
+D06.png,hand,on_wheel,khác giá trị (IoU=0.65),unknown,no,peer,4.7,Kiểm tra ảnh gốc: nếu tay không chạm vô lăng và thấy rõ thì chọn no
+D06.png,hand,on_wheel,khác giá trị (IoU=0.83),unknown,no,peer,4.7,Kiểm tra ảnh gốc: tương tự dòng trên
+D06.png,face,gaze_zone,khác giá trị (IoU=0.72),other,road,ambiguous,4.5,Kiểm tra ảnh gốc: road khi nhìn qua kính chắn gió phía trước; other khi không chắc
+D06.png,face,glasses,khác giá trị (IoU=0.72),unknown,none,peer,4.5,Kiểm tra ảnh gốc: none chỉ khi thấy rõ vùng mắt không có kính; unknown khi không rõ
+S01_ir.png,face,eye_left,khác giá trị (IoU=0.59),unknown,open,,4.5,"Kiểm tra ảnh gốc: open khi thấy khe mắt mở; unknown khi không phân biệt được (IR-sim, ảnh tối)"
+S01_ir.png,face,eye_right,khác giá trị (IoU=0.59),unknown,open,,4.5,Tương tự eye_left
+S01_ir.png,face,gaze_zone,khác giá trị (IoU=0.59),other,mirror_r,,4.5,Kiểm tra ảnh gốc: mirror_r khi đầu và mắt hướng về gương phải; other khi không chắc
+S01_ir.png,face,glasses,khác giá trị (IoU=0.59),unknown,none,,4.5,Kiểm tra ảnh gốc: none chỉ khi thấy rõ vùng mắt không kính
+S01_rgb.png,face,eye_left,khác giá trị (IoU=0.66),unknown,open,,4.5,Kiểm tra ảnh gốc: như S01_ir; RGB thường rõ hơn để quyết định
+S01_rgb.png,face,eye_right,khác giá trị (IoU=0.66),unknown,open,,4.5,Tương tự eye_left
+S01_rgb.png,face,gaze_zone,khác giá trị (IoU=0.66),other,mirror_r,,4.5,Kiểm tra ảnh gốc: như S01_ir
+S01_rgb.png,face,glasses,khác giá trị (IoU=0.66),unknown,none,,4.5,Kiểm tra ảnh gốc: như S01_ir
+S01_rgb.png,object,type,khác giá trị (IoU=0.91),other,bag,,4.8,Kiểm tra ảnh gốc: bag nếu hình dạng là túi; other nếu không chắc
+S02_ir.png,face,eye_left,khác giá trị (IoU=0.82),unknown,open,,4.5,Kiểm tra ảnh gốc: open khi thấy khe mắt mở
+S02_ir.png,face,eye_right,khác giá trị (IoU=0.82),unknown,open,,4.5,Tương tự eye_left
+S02_ir.png,face,glasses,khác giá trị (IoU=0.82),unknown,none,,4.5,Kiểm tra ảnh gốc: none chỉ khi thấy rõ
+S02_rgb.png,face,eye_left,khác giá trị (IoU=0.60),unknown,open,,4.5,Kiểm tra ảnh gốc: như S02_ir
+S02_rgb.png,face,eye_right,khác giá trị (IoU=0.60),unknown,open,,4.5,Tương tự eye_left
+S02_rgb.png,face,glasses,khác giá trị (IoU=0.60),unknown,none,,4.5,Kiểm tra ảnh gốc: none chỉ khi thấy rõ
+S03_ir.png,child_seat,occupied,khác giá trị (IoU=0.94),unknown,yes,peer,4.8,Kiểm tra ảnh gốc: nếu có trẻ em chọn yes theo cập nhật của labcoach
+S03_rgb.png,frame_meta,camera_blocked,khác giá trị,yes,no,ambiguous,4.4,Guideline chưa định nghĩa rõ tiêu chí camera_blocked. Hỏi coach trước khi quyết định
+S03_rgb.png,child_seat,occupied,khác giá trị (IoU=0.76),unknown,yes,peer,4.8,Kiểm tra ảnh gốc: nếu có trẻ em chọn yes theo cập nhật của labcoach
+S04_ir.png,infant_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,4.8,"Kiểm tra ảnh gốc: có ghế em bé để vẽ box không. Nếu có, chỉnh box sát ghế; nếu không, xóa"
+S04_ir.png,child_seat,occupied,khác giá trị (IoU=0.93),unknown,no,peer,4.8,Kiểm tra ảnh gốc: no khi thấy ghế trống; unknown khi không thấy rõ bên trong
+S04_ir.png,child_seat,box,chỉ có ở peer (hoặc IoU thấp),,,,4.8,Kiểm tra ảnh gốc: nếu có ghế trẻ em thì vẽ box; ghế trống vẫn có box child_seat
+S04_rgb.png,child_seat,occupied,khác giá trị (IoU=0.91),unknown,no,peer,4.8,Tương tự S04_ir; ưu tiên ảnh RGB
+S04_rgb.png,infant_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,4.8,Kiểm tra ảnh gốc: như S04_ir
+S04_rgb.png,child_seat,box,chỉ có ở peer (hoặc IoU thấp),,,,4.8,Kiểm tra ảnh gốc: như S04_ir
+S05_ir.png,object,type,khác giá trị (IoU=0.92),other,bag,mine,4.8,Kiểm tra ảnh gốc: bag nếu hình dạng là túi; other nếu không chắc
+S05_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.40,,,4.5,Kiểm tra ảnh gốc: có thấy mặt đủ để vẽ box không; nếu không thì xóa
+S05_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,4.5,Kiểm tra ảnh gốc: nếu thấy mặt thì vẽ box theo 4.5
+S05_rgb.png,person,seatbelt,khác giá trị (IoU=0.99),unknown,not_worn,peer,4.7,Kiểm tra ảnh gốc: not_worn khi thấy rõ không có dây; unknown khi không thấy rõ
+S05_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.41,,,4.5,Kiểm tra ảnh gốc: như S05_ir
+S05_rgb.png,object,type,khác giá trị (IoU=0.90),other,bag,mine,4.8,Kiểm tra ảnh gốc: như S05_ir
+S05_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,4.5,Kiểm tra ảnh gốc: như S05_ir
+S06_ir.png,person,seat,khác giá trị (IoU=0.97),rear_right,rear_left,peer,4.4,Kiểm tra ảnh gốc: người ở bên trái ảnh là rear_right (camera nhìn về sau xe); chọn theo vị trí trong ảnh
+S06_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.37,,,4.5,Kiểm tra ảnh gốc: có thấy mặt không; nếu không thì xóa
+S06_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,4.5,Kiểm tra ảnh gốc: nếu thấy mặt thì vẽ box
+S06_rgb.png,frame_meta,camera_blocked,khác giá trị,yes,no,ambiguous,4.4,Guideline chưa định nghĩa rõ. Hỏi coach trước khi quyết định
+S06_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.39,,,4.5,Kiểm tra ảnh gốc: như S06_ir
+S06_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,4.5,Kiểm tra ảnh gốc: như S06_ir
+S07_ir.png,object,type,khác giá trị (IoU=0.93),other,bag,mine,4.8,Kiểm tra ảnh gốc: bag nếu hình dạng là túi
+S07_rgb.png,infant_seat,seat,khác giá trị (IoU=0.88),rear_right,rear_middle,peer,4.4,Kiểm tra ảnh gốc: xác định ghế em bé ở vị trí nào theo xe; rear_right là bên trái ảnh
+S07_rgb.png,object,type,khác giá trị (IoU=0.93),other,bag,mine,4.8,Kiểm tra ảnh gốc: bag nếu hình dạng là túi
+S08_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.48,,,4.5,Kiểm tra ảnh gốc: có thấy mặt không
+S08_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,4.5,Kiểm tra ảnh gốc: nếu thấy mặt thì vẽ box
+S08_ir.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,4.8,Kiểm tra ảnh gốc: nếu có vật thì vẽ box object
+S08_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,4.5,Kiểm tra ảnh gốc: nếu thấy mặt thì vẽ box
+S08_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.46,,,4.5,Kiểm tra ảnh gốc: có thấy mặt không
+S08_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,4.5,Kiểm tra ảnh gốc: nếu thấy mặt thì vẽ box
+S08_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,4.8,Kiểm tra ảnh gốc: nếu có vật thì vẽ box object
+S08_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,4.5,Kiểm tra ảnh gốc: nếu thấy mặt thì vẽ box
+
