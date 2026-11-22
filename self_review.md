@@ -1,4 +1,4 @@
-# Tự đánh giá — <Họ tên> · <Gxx>
+# Tự đánh giá — Trịnh Vinh Khánh· G05
 
 ## 1. Tự rà soát 4 cảnh
 
@@ -24,4 +24,6 @@ Lần sau tránh bằng cách: Đảm bảo hoàn thành các thuộc tính sau 
 
 ## 3. Ghi chú về disagreement_log
 
-Một dòng bạn của mình đúng và mình sai. Mình học được gì từ dòng đó: …
+Các ảnh D04, D05, D06, bạn đã điền đầy đủ các thuộc tính cho hand nhưng tôi vẫn để mặc định unknow. Sau kiểm tra, tôi đã chỉnh sửa lại với ảnh bạn đã làm đúng. 
+
+Sau qc cho bài làm của bạn, tôi nhận thấy mình cần cẩn thận hơn trong kiểm tra các thuộc tính, tôi cần hoàn thành các thuộc tinh sau khi gán xong một nhãn và trước khi gãn một nhãn mới.
